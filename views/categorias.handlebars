@@ -1,1 +1,24 @@
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>      
+                {{#each categorias}}
+                <tr>
+                <td>{{this.nome}}</td>
+                <td>{{this.descricao}}</td>
+                <td><a href="#">Editar</a> <a href="#">Deletar</a></td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    <a href="/categorias/adicionar" class="add-btn">+ Adicionar Categoria</a>
+
+</body>
+</html>
 
