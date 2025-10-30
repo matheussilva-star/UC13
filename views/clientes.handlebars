@@ -1,1 +1,14 @@
+{{#if clientes.length}}
+    {{#each clientes}}
+    <div>
+        <h2>{{this.nome}}</h2>
+        <p>E-mail: {{this.email}}</p>
+        <p>Senha: {{this.senha}}</p>
+        <p>Endereço: {{this.endereco}}</p>
+    </div>
+    {{/each}}
+{{else}}
+    <p>Sem clientes no momento.</p>
+{{/if}}
 
+<a href="/" class="btn btn-primary" tabindex="-1" role="button" aria-disabled="true">Ir para a página Produtos</a>
