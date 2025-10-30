@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Novos Produtos</title>
+</head>
+<body>
+    <h1>Cadastro de Produtos</h1>
+    <form action="/produtos/add" method="POST">
+        <label for="nome" class="form-label">Nome:</label>
+        <input type="text" class="form-control" id="nome" name="nome" value="" required><br><br>
+
+        <label for="descricao" class="form-label">Descrição:</label>
+        <textarea id="descricao" class="form-control" id="descricao" name="descricao" value="" required></textarea><br><br>
+
+        <label for="preco" class="form-label">Preço:</label>
+        <input type="number" class="form-control" id="preco" name="preco" value="" required><br><br>
+
+        <label for="estoque" class="form-label">Estoque:</label>
+        <input type="number" class="form-control" id="estoque" name="estoque" value="" required><br><br>        
+
+        <label for="categoria" class="form-label">Categoria:</label>
+
+        <select id="categoria" name="id_categoria" required>
+            {{#each categorias}}
+            <option value="{{this.id_categoria}}">{{this.nome}}</option>
+            {{/each}}
+        </select>
+        <br><br>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+</body>
+</html>
+
 
